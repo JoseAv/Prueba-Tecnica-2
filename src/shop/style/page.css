@@ -1,0 +1,14 @@
+.container-main {
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+    min-height: 100dvh;
+}
+
+.container-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}

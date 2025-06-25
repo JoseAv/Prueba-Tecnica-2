@@ -1,8 +1,8 @@
 import { use } from "react"
 import { createContextProduct } from "../../hooks/ManageReducerProducts"
 import type { Product } from "../../types/products"
-import { ShowProduct } from "./produc"
-
+import { ShowProduct } from "./Produc"
+import '../../style/gridProcucts.css'
 
 export const ShowProducts = () => {
     const sendData = use(createContextProduct)
@@ -12,13 +12,13 @@ export const ShowProducts = () => {
 
     return <>
         <h1>Tienda de Productos</h1>
-
-        {products.map((product: Product) => {
-            return <div key={product.id}>
-                <ShowProduct product={product} />
-            </div>
-        })}
-
+        <div className="products-container-grid">
+            {products.map((product: Product) => {
+                return <div key={product.id}>
+                    <ShowProduct product={product} styleProductos={"shop"} />
+                </div>
+            })}
+        </div>
     </>
 
 }

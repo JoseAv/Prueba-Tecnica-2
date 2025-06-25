@@ -1,0 +1,38 @@
+.shop {
+
+    .name {
+        font-size: 1.5em;
+        color: #448AFF;
+        font-weight: bold;
+        font-style: oblique;
+    }
+
+    .description {
+        font-size: 1em;
+        font-weight: 500;
+        font-weight: bold;
+        color: #82B1FF;
+    }
+
+    .category {
+        font-size: 1em;
+        font-weight: 300;
+        font-weight: bold;
+        color: #A8B2D1;
+    }
+
+    .price {
+        font-size: 1em;
+        font-weight: 300;
+        font-weight: bold;
+        color: #FF4081;
+    }
+
+    .stock {
+        font-size: 1em;
+        font-weight: 300;
+        font-weight: bold;
+        color: #82B1FF;
+    }
+
+}

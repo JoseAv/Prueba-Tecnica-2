@@ -1,18 +1,19 @@
-import type { Product } from "../types/products"
+import type { Product } from "../../types/products"
+import './product.css'
 
-export const ShowProduct = ({ product }: { product: Product }) => {
+export const ShowProduct = ({ product, styleProductos = 'shop' }: { product: Product, styleProductos: string }) => {
 
     return (
-        <>
-            <h3>{product.name}</h3>
-            <h4>{product.description}</h4>
-            <p>{product.category}</p>
+        <div className={styleProductos}>
+            <p className="name">{product.name}</p>
+            <p className="description">{product.description}</p>
+            <p className="category">{product.category}</p>
             <img src={product.image} alt="" />
-            <p>{product.price}</p>
-            <p>{product.stock}</p>
+            <p className="price">{product.price}</p>
+            <p className="stock">{product.stock}</p>
             <button>Add Car</button>
 
-        </>
+        </div>
     )
 
 

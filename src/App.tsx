@@ -1,13 +1,13 @@
 import './App.css'
-import { ShowProducts } from './shop/components/products/ShowProducts'
 import { ProviderContextProduct } from './shop/context/ContextProducts'
+import { PageShop } from './shop/page/PageShop'
 
 function App() {
 
   return (
     <>
       <ProviderContextProduct>
-        <ShowProducts />
+        <PageShop />
       </ProviderContextProduct>
     </>
   )
