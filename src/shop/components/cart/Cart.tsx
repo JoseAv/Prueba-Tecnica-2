@@ -1,11 +1,11 @@
 import { use } from "react"
 import { createContextProduct } from "../../hooks/ManageReducerProducts"
 import { ShowProduct } from "../products/Produc"
+import './cart.css'
 
 export const Cart = () => {
     const sendData = use(createContextProduct)
     if (!sendData) return <h1>No hay datos Cargados</h1>
-    console.log(sendData)
     const { Card } = sendData
 
 

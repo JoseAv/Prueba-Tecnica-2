@@ -14,7 +14,11 @@ export interface interfaceState {
     Card: Product[] | []
     OriginalProduct: Product[]
 }
+export interface reduceUse extends interfaceState {
+    addProduct: (products) => void
+}
 
 export interface interfaceAction {
     type: string,
+    product?: Product
 }

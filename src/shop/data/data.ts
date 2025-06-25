@@ -1,5 +1,11 @@
 import type { Product } from "../types/products";
 
+export const AccionDispatch = {
+    AddProduct: 'Add_Product'
+} as const
+
+
+
 export const PRODUCTS: Product[] = [
     {
         id: '1',

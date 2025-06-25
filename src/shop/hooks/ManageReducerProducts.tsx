@@ -1,12 +1,16 @@
 import { createContext, useReducer } from "react";
-import { PRODUCTS } from "../data/data";
-import type { interfaceState } from "../types/products";
+import { AccionDispatch, PRODUCTS } from "../data/data";
+import type { Product, reduceUse } from "../types/products";
+import { ProductsReduce } from "../context/ProductsReduce";
 
-export const createContextProduct = createContext<interfaceState | null>(null);
+export const createContextProduct = createContext<reduceUse | null>(null);
 
-export const useReducerCar = (): interfaceState => {
-    const [state] = useReducer(useReducerCar, { products: PRODUCTS, Card: PRODUCTS, OriginalProduct: PRODUCTS })
+export const useReducerCar = (): reduceUse => {
+    const [state, dispatch] = useReducer(ProductsReduce, { products: PRODUCTS, Card: [], OriginalProduct: PRODUCTS })
+
+    const addProduct = (product: Product) => dispatch({ type: AccionDispatch.AddProduct, product })
 
 
-    return { products: state.products, Card: state.Card, OriginalProduct: state.OriginalProduct }
+
+    return { products: state.products, Card: state.Card, OriginalProduct: state.OriginalProduct, addProduct }
 }
