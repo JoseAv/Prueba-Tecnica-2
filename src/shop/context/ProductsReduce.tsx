@@ -41,7 +41,6 @@ export const ProductsReduce = (state: interfaceState, action: interfaceAction): 
 
         newCard[findIndex].cant -= 1
         newCard[findIndex].stock += 1
-
         if (newCard[findIndex].cant <= 0) {
             newCard.splice(findIndex, 1)
             return {
@@ -50,8 +49,8 @@ export const ProductsReduce = (state: interfaceState, action: interfaceAction): 
                 Card: newCard
             }
         }
-        newCard[findIndex].total = newCard[findIndex].price * newCard[findIndex].cant
 
+        newCard[findIndex].total = newCard[findIndex].price * newCard[findIndex].cant
         return {
             ...state,
             products: updateStock,
