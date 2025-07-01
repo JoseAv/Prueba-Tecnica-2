@@ -1,44 +1,56 @@
 .shop {
 
-    .name {
-        font-size: 1.5em;
-        color: #448AFF;
-        font-weight: bold;
-        font-style: oblique;
-    }
+    height: 100%;
+}
 
-    .description {
-        font-size: 1em;
-        font-weight: 500;
-        font-weight: bold;
-        color: #82B1FF;
-    }
+.name {
+    font-size: 1.5em;
+    color: #448AFF;
+    font-weight: bold;
+    font-style: oblique;
+}
 
-    .category {
-        font-size: 1em;
-        font-weight: 300;
-        font-weight: bold;
-        color: #A8B2D1;
-    }
+.description {
+    font-size: 1em;
+    font-weight: 500;
+    font-weight: bold;
+    color: #82B1FF;
+}
 
-    .price {
-        font-size: 1em;
-        font-weight: 300;
-        font-weight: bold;
-        color: #FF4081;
-    }
+.category {
+    font-size: 1em;
+    font-weight: 300;
+    font-weight: bold;
+    color: #A8B2D1;
+}
 
-    .stock {
-        font-size: 1em;
-        font-weight: 300;
-        font-weight: bold;
-        color: #82B1FF;
-    }
+.price {
+    font-size: 1em;
+    font-weight: 300;
+    font-weight: bold;
+    color: #FF4081;
+}
 
-    img {
-        border-radius: 30px;
-        height: 150px;
-        width: 150px;
-    }
+.stock {
+    font-size: 1em;
+    font-weight: 300;
+    font-weight: bold;
+    color: #82B1FF;
+}
+
+img {
+    border-radius: 30px;
+    height: 150px;
+    width: 150px;
+}
+
+
+
+.show-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100%;
 
 }

@@ -3,8 +3,8 @@ import { createContextProduct, useReducerCar } from '../hooks/ManageReducerProdu
 
 
 export const ProviderContextProduct = ({ children }: { children: ReactNode }) => {
-    const { products, Card, OriginalProduct, addProduct } = useReducerCar()
-    const sendData = { products, Card, OriginalProduct, addProduct }
+    const { products, Card, OriginalProduct, addProduct, resProduct } = useReducerCar()
+    const sendData = { products, Card, OriginalProduct, addProduct, resProduct }
 
     return (
         <createContextProduct.Provider value={sendData}>

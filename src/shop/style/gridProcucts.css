@@ -6,3 +6,10 @@
     gap: 10px;
     width: 1100px;
 }
+
+.products-container-one-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}

@@ -14,7 +14,7 @@ export const ShowProducts = () => {
         <h1>Tienda de Productos</h1>
         <div className="products-container-grid">
             {products.map((product: Product) => {
-                return <div key={product.id}>
+                return <div className="products-container-one-products" key={product.id}>
                     <ShowProduct product={product} styleProductos={"shop"} />
                 </div>
             })}

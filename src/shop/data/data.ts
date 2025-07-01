@@ -1,7 +1,8 @@
 import type { Product } from "../types/products";
 
 export const AccionDispatch = {
-    AddProduct: 'Add_Product'
+    AddProduct: 'Add_Product',
+    ResProducts: 'Res_Product'
 } as const
 
 

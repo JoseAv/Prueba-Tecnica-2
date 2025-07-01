@@ -9,13 +9,19 @@ export interface Product {
 }
 
 
+export interface cardsProduct extends Product {
+    cant: number
+    total: number
+}
+
 export interface interfaceState {
     products: Product[],
-    Card: Product[] | []
+    Card: cardsProduct[] | []
     OriginalProduct: Product[]
 }
 export interface reduceUse extends interfaceState {
     addProduct: (products) => void
+    resProduct: (products) => void
 }
 
 export interface interfaceAction {

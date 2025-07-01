@@ -9,8 +9,9 @@ export const useReducerCar = (): reduceUse => {
     const [state, dispatch] = useReducer(ProductsReduce, { products: PRODUCTS, Card: [], OriginalProduct: PRODUCTS })
 
     const addProduct = (product: Product) => dispatch({ type: AccionDispatch.AddProduct, product })
+    const resProduct = (product: Product) => dispatch({ type: AccionDispatch.ResProducts, product })
 
 
 
-    return { products: state.products, Card: state.Card, OriginalProduct: state.OriginalProduct, addProduct }
+    return { products: state.products, Card: state.Card, OriginalProduct: state.OriginalProduct, addProduct, resProduct }
 }
