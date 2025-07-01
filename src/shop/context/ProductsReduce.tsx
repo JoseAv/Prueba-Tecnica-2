@@ -7,9 +7,10 @@ export const ProductsReduce = (state: interfaceState, action: interfaceAction): 
     if (action.type === AccionDispatch.AddProduct) {
         const product = action.product
         if (!product) return state
+        if (product.stock <= 0) return state
 
         const findIndex = state.Card.findIndex((produ) => produ.id === product.id)
-        const updateStock = UpdateStock(state.products, product)
+        const updateStock = UpdateStock(state.products, product, 'res')
 
         if (findIndex === -1) {
             return {
@@ -22,6 +23,7 @@ export const ProductsReduce = (state: interfaceState, action: interfaceAction): 
         const newCard = [...state.Card]
         newCard[findIndex].cant += 1
         newCard[findIndex].total = newCard[findIndex].price * newCard[findIndex].cant
+        newCard[findIndex].stock -= 1
         return {
             ...state,
             products: updateStock,
@@ -30,19 +32,21 @@ export const ProductsReduce = (state: interfaceState, action: interfaceAction): 
     }
 
     if (action.type === AccionDispatch.ResProducts) {
-        console.log('ENTRADA AQUI')
         const product = action.product
         if (!product) return state
 
         const findIndex = state.Card.findIndex((produ) => produ.id === product.id)
         const newCard = [...state.Card]
-        newCard[findIndex].cant -= 1
+        const updateStock = UpdateStock(state.products, product, 'sum')
 
+        newCard[findIndex].cant -= 1
+        newCard[findIndex].stock += 1
 
         if (newCard[findIndex].cant <= 0) {
             newCard.splice(findIndex, 1)
             return {
                 ...state,
+                products: updateStock,
                 Card: newCard
             }
         }
@@ -50,6 +54,7 @@ export const ProductsReduce = (state: interfaceState, action: interfaceAction): 
 
         return {
             ...state,
+            products: updateStock,
             Card: [...newCard]
         }
     }
